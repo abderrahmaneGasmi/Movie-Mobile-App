@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { colors } from "../../Constants/Colors";
 
-export default function List() {
+export default function Nav() {
   const [selectedcat, setSelectedcat] = useState("Now Playing");
   const updatecat = (cat: string) => {
     setSelectedcat(cat);
@@ -24,7 +24,7 @@ const navlist = ["Now Playing", "Popular", "Top Rated", "Upcoming"];
 
 const styles = StyleSheet.create({
   navlist: {
-    marginTop: 20,
+    marginVertical: 40,
   },
 });
 

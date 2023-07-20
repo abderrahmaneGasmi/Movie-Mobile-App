@@ -1,12 +1,14 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 import { colors } from "../Constants/Colors";
 import { Image } from "react-native";
 import Popular from "../components/home/Popular";
-import List from "../components/home/List";
+import Nav from "../components/home/Nav";
+import GridShows from "../components/home/GridShows";
+import AllCategories from "../components/home/AllCategories";
 export default function Home() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text
         style={{
           color: "white",
@@ -26,8 +28,10 @@ export default function Home() {
         />
       </View>
       <Popular />
-      <List />
-    </View>
+      <Nav />
+      <GridShows />
+      <AllCategories />
+    </ScrollView>
   );
 }
 const styles = StyleSheet.create({
@@ -36,6 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     padding: 50,
     gap: 20,
+    // marginBottom: 70,
     // alignItems: "center",
     // justifyContent: "center",
   },

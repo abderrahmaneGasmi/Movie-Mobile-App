@@ -17,7 +17,7 @@ export default function Popular() {
       </Text>
       <ScrollView horizontal={true} style={styles.popularlist}>
         {popularimages.map((item, i) => (
-          <View style={{ position: "relative" }}>
+          <View style={{ position: "relative" }} key={i}>
             <Image
               // source={require(`../../assets/popular${item}.png`)}
               source={item}
